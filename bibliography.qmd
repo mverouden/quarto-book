@@ -1,0 +1,6 @@
+\pagestyle{empty}
+
+# Bibliography {.unnumbered}
+
+::: {#refs}
+:::

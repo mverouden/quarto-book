@@ -1,0 +1,98 @@
+# Summary
+
+<!-- Set knitr options -->
+
+```{r knitrSetupOptions}
+#| label: knitrSetupOptions
+#| eval: true
+#| include: false
+
+knitr::opts_chunk$set(comment = "#>",
+                      tidy = FALSE)
+knitr::knit_theme$set("default")
+```
+
+In summary, this book has no content whatsoever.
+
+::: callout-note
+Note that there are five types of callouts, including: `note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+::: callout-warning
+## Warning
+
+Callouts provide a simple way to attract attention, for example, to this warning.
+:::
+
+::: callout-important
+## This is Important
+
+Danger, callouts will really improve your writing.
+:::
+
+::: callout-tip
+## Tip With Caption
+
+This is an example of a callout with a caption.
+:::
+
+::: {.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+You need to be cautious!
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+We have a nice data summary in @tbl-iris.
+
+```{r tbl-iris}
+#| label: tbl-iris
+#| echo: false
+#| eval: true
+#| tbl-cap: "The boring Iris data."
+
+knitr::kable(head(iris), booktabs = TRUE)
+```
+
+<!-- [This is a span that has the class aside which places it in the margin without a footnote number.]{.aside} -->
+
+## Using R interactively {#sec-use-r-interactive}
+
+When you start using RStudio (our GUI of choice for working with R), it issues a console prompt (Panel 2 of @fig-airq) as described in @sec-r-coding. At the console prompt R can be used interactively, meaning that output of a command is printed in the console. You can for example use R as a simple calculator for subtraction of two values by typing the following at the console prompt and executing it by pressing **Enter** at the end of the line:
+
+```{r simple-subtraction}
+#| label: simple-subtraction
+#| echo: true
+#| eval: true
+
+8 - 2
+```
+
+By pressing enter you tell R to evaluate your command and the output gets printed in the console (as shown above by the commented out part starting with `#>`). The `[1]` in the output tells which component in the output you are looking at. This is in our example not very useful, because the expected result is just one value.
+
+### Basic arithmetic operators
+
+Apart from subtraction as used in the previous example, all basic arithmetic operators are available in R. @tbl-arithmetic-operators shows the symbols used to represent the basic arithmetic operations.
+
+| Operation           | Symbol          |
+|---------------------|-----------------|
+| Addition            | `8 + 2`         |
+| Subtraction         | `8 - 2`         |
+| Multiplication      | `8 * 2`         |
+| Division            | `8 / 2`         |
+| Exponentiation      | `8^2` or `8**2` |
+| Integer division    | `8 %/% 2`       |
+| Modulus / Remainder | `8 %% 2`        |
+
+: Arithmetic Operators. {#tbl-arithmetic-operators}
+
+If a command is composed of several arithmetic operators, they are evaluated in the usual order of precedence, that is, first the exponentiation (power) symbol, followed by division, then multiplication, and finally addition and subtraction. Parentheses can also be added to control precedence if required or for readability of your code. For example in the following the command the parentheses are used for readability:
+
+```{r simple-arithmetic}
+#| label: simple-arithmetic
+#| echo: true
+#| eval: true
+
+3^2 + (6 / 3) + 2
+```

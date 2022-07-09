@@ -1,0 +1,73 @@
+project:
+  type: book
+  # output-dir: docs
+
+book:
+  title: "Quarto Book"
+  subtitle: "Based on documentclass book"
+  author: "Jane Doe"
+  date: "7/8/2022"
+  cover-image: images/cover.png
+  site-url: https://www.verouden.net/
+  # site-url: https://rstudio-education.github.io/hopr/
+  repo-url: https://github.com/mverouden/quarto-book-example/
+  repo-branch: main
+  repo-actions: [edit]
+  sharing: [twitter, facebook, linkedin]
+  downloads: [pdf, epub]
+  number-sections: true
+  chapters:
+    - index.qmd
+    - part: "First Week"
+      chapters:
+        - intro.qmd
+    - part: "Second Week"
+      chapters:
+        - summary.qmd
+    - bibliography.qmd
+    - sessionInfo.qmd
+
+bibliography: latex/bibliography.bib
+csl: latex/chemometrics-and-intelligent-laboratory-systems.csl
+
+format:
+  html:
+    theme: cosmo
+    # theme:
+    #   light: flatly
+    #   dark: darkly
+    highlight-style: default
+    cover-image: images/cover.png
+    code-background: true
+    code-fold: false
+    # code-summary: "Show the code"
+    code-link: true
+  pdf:
+    documentclass: book
+    # classoption: [10pt,twoside,openright]
+    include-in-header: latex/preamble.tex
+    include-before-body: latex/before_body.tex
+    include-after-body: latex/after_body.tex
+    toc: true
+    toc-depth: 3
+    toc-title: Contents
+    keep-tex: false
+    subject: "test"
+    keywords:
+      - "keyword 1"
+      - "keyword 2"
+      - "keyword 3"
+  epub:
+    cover-image: images/cover.png
+  # docx:
+  #   toc: true
+  #   number-sections: true
+  #   highlight-style: default
+
+editor: visual
+
+execute:
+  warning: false
+
+
+

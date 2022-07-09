@@ -1,0 +1,59 @@
+%% PACKAGES
+\usepackage[papersize={214mm,301mm},%
+  layout=a4paper,%
+  layouthoffset=2mm,%
+  layoutvoffset=2mm,%
+  margin=20mm%,showframe
+  ]{geometry}
+\usepackage{tocbibind}
+
+%% Rename Part to Week
+\renewcommand\partname{Week}
+%% Set Week numbering to arabic instead of Roman
+\renewcommand{\thepart}{\arabic{part}}
+%% Rename Chapter to Lesson
+\renewcommand\chaptername{Lesson}
+
+\usepackage{fancyhdr}
+\fancyhead{} % clear all header fields
+\renewcommand{\chaptermark}[1]{%
+\markboth{\thechapter.\ #1}{}}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot{}
+\fancyfoot[LE]{\thepage}
+\fancyfoot[RO]{\thepage}
+
+\usepackage{makeidx}
+\makeindex
+\usepackage[totoc]{idxlayout}
+
+%% PACKAGESP: FONT
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[osf,sc]{mathpazo}
+\linespread{1.05}
+
+%% PACKAGES: HYPERREF
+% \usepackage[pagebackref=true,linktocpage=true,breaklinks=true,%
+%   bookmarks=true]{hyperref} % [pdftex,] extensive support for hypertext in LaTeX
+% \hypersetup{%
+%   pdfpagemode={UseThumbs},
+%   pdfstartview=FitV,
+%   pdfpagelayout=SinglePage%
+% }
+
+% NEW COMMANDS
+\newcommand{\scscst}{\scriptscriptstyle}%
+\newcommand{\scst}{\scriptstyle}%
+\newcommand{\Robject}[1]{\textit{\textbf{#1}}}% _**#1**_
+\newcommand{\Rfunction}[1]{\textit{#1}}% *#1*
+\newcommand{\Rclass}[1]{\textit{#1}}% *#1*
+\newcommand{\Rpackage}[1]{\textbf{#1}}% **#1**
+\newcommand{\Rexpression}[1]{\texttt{#1}}% <tt>#1</tt>
+\newcommand{\Rmethod}[1]{\texttt{#1}}%  <tt>#1</tt>
+\newcommand{\Rfunarg}[1]{\texttt{#1}}% <tt>#1</tt>
+\newcommand{\filename}[1]{\textsf{#1}}%
+
+% \frontmatter

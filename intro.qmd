@@ -1,0 +1,94 @@
+# Introduction
+
+<!-- Set knitr options -->
+
+```{r knitrSetupOptions}
+#| label: knitrSetupOptions
+#| eval: true
+#| include: false
+
+knitr::opts_chunk$set(comment = "#>",
+                      tidy = FALSE)
+knitr::knit_theme$set("default")
+```
+
+This is a book created from markdown\index{markdown} and executable code.
+
+See @knuth84 for additional discussion of literate programming.
+
+## R coding {#sec-r-coding}
+
+For a demonstration of a scatterplot in R, see @fig-airq.
+
+```{r fig-airq}
+#| label: fig-airq
+#| echo: false
+#| eval: true
+#| fig-cap: 'Scatterplot of Ozone vs. Temperature for the _**airquality**_ data set'
+#| fig-align: center
+#| warning: false
+#| code-fold: true
+
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) +
+        geom_point() +
+        geom_smooth(method = "loess", se = FALSE)
+```
+
+```{r sum-airq}
+#| label: sum-airq
+#| echo: true
+#| eval: true
+#| code-fold: false
+
+summary(airquality)
+```
+
+## Python\index{Python} coding
+
+For a demonstration of a line plot on a polar axis, see @fig-polar. An R scatterplot is shown above in @fig-airq.
+
+```{python fig-polar}
+#| label: fig-polar
+#| echo: true
+#| eval: false
+#| code-fold: true
+#| code-summary: "Show the code"
+#| code-line-numbers: true
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+![A line plot on a polar axis](images/fig-polar-output-1.png){#fig-polar fig-align="center"}
+
+## Julia\index{Julia} coding
+
+Plot function pair (x(u), y(u)). See @fig-parametric for an example.
+
+```{julia julia-parametric}
+#| label: julia-parmetric
+#| echo: true
+#| eval: false
+
+using Plots
+
+plot(sin, 
+     x->sin(2x), 
+     0, 
+     2π, 
+     leg=false, 
+     fill=(0,:lavender))
+```
+
+![Parametric Plots](images/fig-parametric-output-1.png){#fig-parametric fig-align="center" width="555"}

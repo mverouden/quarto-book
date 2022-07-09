@@ -1,0 +1,18 @@
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# Quarto Book example
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Quarto Book example source files to make a website, pdf and epub.
+
+## Versions
+Quarto: 1.0.5, by using `quarto --version` in a terminal.
+
+## Render README.Rmd
+To make the README.md file, use:
+```{r render-readme, echo=TRUE, eval=FALSE}
+knitr::knit(input = "./README.Rmd")
+```

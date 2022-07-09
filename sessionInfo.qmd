@@ -1,0 +1,23 @@
+\pagestyle{empty}
+
+# Session Info {.unnumbered}
+
+```{r knitrSetupOptions}
+#| label: knitrSetupOptions
+#| eval: true
+#| include: false
+
+knitr::opts_chunk$set(comment = "#>",
+                      tidy = FALSE)
+knitr::knit_theme$set("default")
+```
+
+```{r session-info}
+#| label: sec:session-info
+#| echo: false
+#| eval: true
+#| warning: false
+
+utils::sessionInfo()
+# xfun::session_info()
+```

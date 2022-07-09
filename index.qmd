@@ -1,0 +1,7 @@
+\pagestyle{fancy}
+
+# Welcome {.unnumbered}
+
+Welcome to MAT503033! Blah blah blah
+
+In this reader for the course "R for Statistics" no prompts are added to R source code, and text output is commented out by default by `#>`. Package names are given in bold text, e.g. **stats** package. Function names are shown in italic (e.g., *paste()*), and object names are displayed in bold italic text (e.g. ***soapData***). Inline code, function arguments, and file names are formatted and displayed in a typewriter font (e.g., for inline code with function arguments: `mean(1:10, trim = 0.1)`, and a file name: `figure/foo.pdf`).
